@@ -74,6 +74,13 @@ As of this writing (May 2009) [Beanstalk](http://beanstalkapp.com/)'s API is in 
 
 To use Beanstalk you will need to specify the --domain, ---username and --password options. --domain is used to specify your beanstalkapp.com subdomain. Using a YAML file containing these options is recommended and should be helpful.
 
+## Acknowledgements
+
+Provisional acknowledges the support of Viewers Like You, and also the following significant contributors:
+
+* Clinton R. Nixon (crnixon)
+* David Eisinger (dce)
+
 ## License
 
 Copyright (c) 2009 Mark Cornick of Viget Labs <mark@viget.com>
