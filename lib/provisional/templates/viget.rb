@@ -43,8 +43,8 @@ db/*.sqlite3
 tmp/**/*
 config/database.yml
 END
-run 'touch tmp/.gitignore log/.gitignore vendor/.gitignore'
 ]
+run 'touch tmp/.gitignore log/.gitignore vendor/.gitignore'
 
 # install jrails javascripts
 rake 'jrails:install:javascripts'
