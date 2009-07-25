@@ -20,6 +20,20 @@ class HerokuTest < Test::Unit::TestCase
     @scm.checkin
   end
 
+  def test_checkin_should_fail_if_heroku_credentials_are_missing
+    File.expects(:open).with(File.join(ENV['HOME'],'.heroku','credentials'),'r').raises(RuntimeError)
+    assert_raise RuntimeError do
+      @scm.checkin
+    end
+  end
+
+  def test_checkin_should_fail_if_heroku_credentials_are_not_in_expected_format
+    File.expects(:open).with(File.join(ENV['HOME'],'.heroku','credentials'),'r').returns(stub(:readlines => %w(pants)))
+    assert_raise RuntimeError do
+      @scm.checkin
+    end
+  end
+
   def test_checkin_should_fail_if_any_step_raises_any_exception
     stub_git_checkin
 
