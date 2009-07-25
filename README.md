@@ -33,10 +33,11 @@ Provisional is only tested on Mac OS X. It should also work on Linux. It is not 
 The SCM option can be one of the following ("`project_name`" refers to the value of the --name option):
 
 * `git`: creates a git repository in the `project_name` directory.
-* `github`: creates a git repository in the `project_name` directory, creates `project_name` on GitHub using the specified credentials, adds it as the "origin" remote, and pushes. (See section below about required configuration.)
+* `github`: creates a git repository in the `project_name` directory, creates `project_name` on GitHub, adds it as the "origin" remote, and pushes. (See section below about required configuration.)
 * `unfuddle`: creates a git repository in the `project_name` directory, creates a repository called `project_name` under an existing Unfuddle project using the specified credentials, and adds it as the "origin" remote. _You must push manually_ because Unfuddle typically has a lag of a few minutes between when a repository is created and when it can be accessed. (See section below about required configuration.)
 * `unfuddle_svn`: creates a Subversion repository called `project_name` under an existing Unfuddle project using the specified credentials, and checks it out into the `project_name` directory.
 * `beanstalk`: creates a Subversion repository called `project_name` on Beanstalk using the specified credentials, and checks it out into the `project_name` directory.
+* `heroku`: creates a git repository in the `project_name` directory, creates an application called `project_name` on Heroku, adds it as the "heroku" remote, and pushes. (See section below about required configuration.)
 
 The domain, username, password, and id options are used by certain SCMs to provide information needed to use an API. The documentation on these SCMs (below) will indicate how they are to be used.
 
