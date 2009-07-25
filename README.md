@@ -75,6 +75,10 @@ As of this writing (May 2009) [Beanstalk](http://beanstalkapp.com/)'s API is in 
 
 To use Beanstalk you will need to specify the --domain, ---username and --password options. --domain is used to specify your beanstalkapp.com subdomain. Using a YAML file containing these options is recommended and should be helpful.
 
+## Heroku
+
+To use [Heroku](http://heroku.com/), you will need to install the Heroku gem with `gem install heroku` and run its command-line tool to enter your Heroku username and password. Since there is already this established convention for Heroku credentials, to prevent redundant configuration, Provisional does not use its own configuration options for Heroku access.
+
 ## Acknowledgements
 
 Provisional acknowledges the support of Viewers Like You, and also the following significant contributors:
