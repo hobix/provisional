@@ -61,7 +61,7 @@ Options specified via the command line take precedence over options specified in
 
 ## GitHub
 
-To use [GitHub](http://github.com/), you will need to place your GitHub username and token in your Git configuration as described here: http://github.com/guides/local-github-config Since there is already this established convention for GitHub credentials, to prevent redundant configuration, Provisional does not use its own configuration options for GitHub access.
+To use [GitHub](http://github.com/), you will need to place your GitHub username and token in your Git configuration as [described here](http://github.com/guides/local-github-config). Since there is already this established convention for GitHub credentials, to prevent redundant configuration, Provisional does not use its own configuration options for GitHub access.
 
 By default, repositories are publicly accessible. Use `--private` to make it private.
 
