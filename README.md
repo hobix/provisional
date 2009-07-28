@@ -39,6 +39,7 @@ The SCM option can be one of the following ("`project_name`" refers to the value
 * `beanstalk`: creates a Subversion repository called `project_name` on Beanstalk using the specified credentials, and checks it out into the `project_name` directory.
 * `heroku`: creates a Git repository in the `project_name` directory, creates an application called `project_name` on Heroku, adds it as the "heroku" remote, and pushes. (See section below about required configuration.)
 * `hg`: creates a Mercurial repository in the `project_name` directory.
+* `bzr`: creates a Bazaar repository in the `project_name` directory.
 
 The domain, username, password, and id options are used by certain SCMs to provide information needed to use an API. The documentation on these SCMs (below) will indicate how they are to be used.
 
