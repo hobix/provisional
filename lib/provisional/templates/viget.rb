@@ -4,11 +4,11 @@
 rake 'rails:freeze:gems'
 
 # install gems
-gem 'mocha', :version => '>= 0.9.5'
-gem 'thoughtbot-factory_girl', :lib => 'factory_girl', :source => 'http://gems.github.com', :version => '>= 1.2.0'
-gem 'thoughtbot-shoulda', :lib => 'shoulda', :source => 'http://gems.github.com', :version => '>= 2.10.1'
-gem 'webrat'
-rake 'gems:install gems:unpack'
+gem 'mocha', :version => '>= 0.9.5', :env => 'test'
+gem 'thoughtbot-factory_girl', :lib => 'factory_girl', :source => 'http://gems.github.com', :version => '>= 1.2.0', :env => 'test'
+gem 'thoughtbot-shoulda', :lib => 'shoulda', :source => 'http://gems.github.com', :version => '>= 2.10.1', :env => 'test'
+gem 'webrat', :env => 'test'
+rake 'gems:install gems:unpack', :env => 'test'
 
 # install plugins
 plugin 'hoptoad_notifier', :git => 'git://github.com/thoughtbot/hoptoad_notifier.git'
@@ -42,7 +42,6 @@ db/*.db
 db/*.sqlite3
 tmp/**/*
 config/database.yml
-END
 ]
 run 'touch tmp/.gitignore log/.gitignore vendor/.gitignore'
 
