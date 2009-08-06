@@ -30,6 +30,13 @@ Provisional is only tested on Mac OS X. It should also work on Linux. It is not 
           --private, -r:   Private repository (for some SCMs, see documentation)
               --help, -h:   Show this message
 
+All of these options can be specified either on the command line, or in a YAML file indicated by the --config option. The YAML file should be in simple key: value format:
+
+    name: awesome_project
+    scm: git
+
+Options specified via the command line take precedence over options specified in a YAML file, if both are specified.
+
 The SCM option can be one of the following ("`project_name`" refers to the value of the --name option):
 
 * `git`: creates a Git repository in the `project_name` directory.
@@ -54,12 +61,10 @@ The template option can be either a literal path to a template file, a URL for a
 * removes `public/index.html`, `test/fixtures`, prototype, and script.aculo.us
 * creates an SCM repository and checks the application in
 
-All of these options can be specified either on the command line, or in a YAML file indicated by the --config option. The YAML file should be in simple key: value format:
+A few other templates are provided:
 
-    name: awesome_project
-    scm: git
-
-Options specified via the command line take precedence over options specified in a YAML file, if both are specified.
+* The `braces` template installs an environment similar, but not exactly identical, to Thoughtbot's [Suspenders](http://github.com/thoughtbot/suspenders) bootstrap.
+* The `rspec_and_friends` template installs RSpec, Cucumber and Webrat.
 
 ## GitHub
 
