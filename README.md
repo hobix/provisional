@@ -27,7 +27,7 @@ Provisional is only tested on Mac OS X. It should also work on Linux. It is not 
       --password, -p <s>:   Password (for some SCMs, see below)
             --id, -i <s>:   Id (for some SCMs, see below)
         --config, -c <s>:   Config file (optional)
-          --private, -r:   Private repository (for some SCMs, see documentation)
+           --private, -r:   Private repository (for some SCMs, see documentation)
               --help, -h:   Show this message
 
 All of these options can be specified either on the command line, or in a YAML file indicated by the --config option. The YAML file should be in simple key: value format:
