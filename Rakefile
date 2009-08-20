@@ -15,9 +15,10 @@ begin
     gem.add_dependency 'rails', '>= 2.3.0'
     gem.add_dependency 'git', '>= 1.0.5'
     gem.add_dependency 'builder', '>= 2.1.2'
+    gem.add_development_dependency "yard"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
-
+  Jeweler::GemcutterTasks.new
   Jeweler::RubyforgeTasks.new do |rubyforge|
     rubyforge.doc_task = "yardoc"
   end
@@ -46,6 +47,8 @@ rescue LoadError
   end
 end
 
+
+task :test => :check_dependencies
 
 begin
   require 'reek/rake_task'
@@ -79,6 +82,6 @@ begin
   YARD::Rake::YardocTask.new
 rescue LoadError
   task :yardoc do
-    abort "RCov is not available. In order to run rcov, you must: sudo gem install spicycode-rcov"
+    abort "YARD is not available. In order to run yardoc, you must: sudo gem install yard"
   end
 end
